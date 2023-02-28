@@ -1,5 +1,6 @@
 # tcp-control-relay-arduino
-Code to control via network (via TCP protocol) a relay connected to an Arduino Uno, which mounts an ethernet shield.
+Code to control via network (via TCP protocol) a board with four relays connected to an Arduino Uno, which mounts an ethernet shield.
+Here you can find the code and the connection scheme.
 
 Created by tommi00 @ GitHub -> https://tommi00.github.io/t
 
