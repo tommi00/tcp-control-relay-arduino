@@ -1,8 +1,8 @@
 #include "Ethernet.h"
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };    // mac address (keep this one when unknown)
-byte ip[] = { 192, 168, 1, 159 };                       // ip address
-byte gateway[] = { 192, 168, 1, 1 };                    // gateway rete
+byte ip[] = { 192, 168, 2, 159 };                       // ip address
+byte gateway[] = { 192, 168, 2, 1 };                    // gateway rete
 byte subnet[] = { 255, 255, 255, 0 };                   // subnet mask
 
 unsigned int port = 9002;                               // local port to listen on
@@ -76,6 +76,13 @@ void loop() {
       client.print("okPOF4");
       digitalWrite(RELAY4_PIN, HIGH);
       Serial.println("relay 4 turned off"); 
+    }else if (stringReceived == "PONALL") {
+      client.print("okPONALL");
+      digitalWrite(RELAY1_PIN, LOW);
+      digitalWrite(RELAY2_PIN, LOW);
+      digitalWrite(RELAY3_PIN, LOW);
+      digitalWrite(RELAY4_PIN, LOW);
+      Serial.println("all relay turned on");
     }else if (stringReceived == "POFALL") {
       client.print("okPOFALL");
       digitalWrite(RELAY1_PIN, HIGH);
