@@ -5,3 +5,7 @@ Here you can find the code and the connection scheme.
 Created by tommi00 @ GitHub -> https://tommi00.github.io/t
 
 >> UDP VERSION: https://github.com/tommi00/udp-control-relay-arduino
+
+
+- V1: first version
+- V2: added "PONALL" command
